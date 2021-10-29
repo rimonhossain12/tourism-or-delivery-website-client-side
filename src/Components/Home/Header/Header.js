@@ -1,12 +1,14 @@
 import React from 'react';
 import { Carousel, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
+import useAuth from '../../../hooks/useAuth';
 import img1 from '../../../images/carosule/1.jpeg'
 import img2 from '../../../images/carosule/2.jpeg'
 import img3 from '../../../images/carosule/3.jpeg'
 import './Header.css';
 
 const Header = () => {
+  const { signInUsingGoogle,user} = useAuth();
   return (
     <div className="bg-img">
       <Navbar expand="lg" className="top-fixed">
@@ -19,6 +21,8 @@ const Header = () => {
               <Nav.Link as={HashLink} to="/about#about" className="text-primary fw-bold">About</Nav.Link>
               <Nav.Link as={HashLink} to="/booking#booking" className="text-primary fw-bold">Booking</Nav.Link>
               <Nav.Link as={HashLink} to="/blog#blog" className="text-primary fw-bold">Blog</Nav.Link>
+              <button className="btn btn-info text-light fw-bold badge rounded-pill btn-style">Log In</button>
+              <button className="btn btn-info ms-2 text-light fw-bold badge rounded-pill btn-style">SingOut</button>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -8,19 +8,22 @@ import Banner from './Components/Home/Banner/Banner';
 import Header from './Components/Home/Header/Header';
 import About from './Components/About/About';
 import Home from './Components/Home/Home/Home';
+import AuthProvider from './context/AuthProvider';
 
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Home></Home>
-        <Switch>
-          <Route path="/about">
-            <About></About>
-          </Route>
-        </Switch>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Home></Home>
+          <Switch>
+            <Route path="/about">
+              <About></About>
+            </Route>
+          </Switch>
+        </Router>
+     </AuthProvider>
     </div>
   );
 }
