@@ -12,6 +12,7 @@ import AuthProvider from './context/AuthProvider';
 import Blog from './Components/Blog/Blog';
 import Place from './Components/Place/Place';
 import Login from './Components/shared/Login/Login';
+import NotFound from './Components/shared/NotFound/NotFound';
 
 
 
@@ -38,6 +39,9 @@ function App() {
             </Route>
           <Route path="/login">
           <Login></Login>
+          </Route>
+          <Route exact ="*">
+            <NotFound></NotFound>
           </Route>
           </Switch>
         </Router>
