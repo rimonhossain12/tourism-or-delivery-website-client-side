@@ -26,7 +26,7 @@ const Header = () => {
               <Nav.Link as={HashLink} to="/booking#booking" className="text-primary fw-bold">Booking</Nav.Link>
 
               {
-                user.displayName && <Nav.Link as={HashLink} className="text-primary fw-bold">{user.displayName}</Nav.Link>
+                user.displayName && <Nav.Link className="text-primary fw-bold">{user.displayName}</Nav.Link>
               }
 
 
