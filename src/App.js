@@ -9,6 +9,8 @@ import Header from './Components/Home/Header/Header';
 import About from './Components/About/About';
 import Home from './Components/Home/Home/Home';
 import AuthProvider from './context/AuthProvider';
+import Blog from './Components/Blog/Blog';
+import Place from './Components/Place/Place';
 
 
 function App() {
@@ -21,9 +23,15 @@ function App() {
             <Route path="/about">
               <About></About>
             </Route>
+            <Route path="/blog">
+              <Blog></Blog>
+            </Route>
+            <Route path="/place">
+              <Place></Place>
+            </Route>
           </Switch>
         </Router>
-     </AuthProvider>
+      </AuthProvider>
     </div>
   );
 }

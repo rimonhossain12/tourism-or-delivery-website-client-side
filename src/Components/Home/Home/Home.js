@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
-            <About></About>
+            {/* <About></About> */}
         </div>
     );
 };
