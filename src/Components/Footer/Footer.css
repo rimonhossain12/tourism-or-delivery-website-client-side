@@ -1,0 +1,19 @@
+.bg-style{
+    background-color: #00224F;
+}
+.list-style{
+    list-style-type: none;
+}
+.list-style li {
+    list-style-type: none;
+    color: white;
+    font-size: 18px;
+    font-family:cursive;
+}
+.icon-style a{
+    list-style-type: none;
+    color:white;
+    display: inline;
+    padding: 5px;
+   font-size: 2rem;
+}
