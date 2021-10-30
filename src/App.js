@@ -11,6 +11,8 @@ import Home from './Components/Home/Home/Home';
 import AuthProvider from './context/AuthProvider';
 import Blog from './Components/Blog/Blog';
 import Place from './Components/Place/Place';
+import Login from './Components/shared/Login/Login';
+
 
 
 function App() {
@@ -34,6 +36,9 @@ function App() {
             <Route path="/blog">
               <Blog></Blog>
             </Route>
+          <Route path="/login">
+          <Login></Login>
+          </Route>
           </Switch>
         </Router>
       </AuthProvider>
