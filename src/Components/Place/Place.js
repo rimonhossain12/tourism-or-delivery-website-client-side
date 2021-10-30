@@ -5,16 +5,17 @@ import plac2 from '../../images/place/2.jpg';
 import plac3 from '../../images/place/3.jpg';
 import plac4 from '../../images/place/4.jpg';
 import plac5 from '../../images/place/5.jpg';
-
+import Footer from '../Footer/Footer';
+import Header from '../Home/Header/Header';
+import Home from '../Home/Home/Home';
 import './place.css';
-
-
 
 const Place = () => {
     return (
         <div>
+           <Header></Header>
             <div className="container mt-5">
-                <h4 className="text-center mb-5 text-primary">Here is a list of all the doctors who are constantly coming out of our institution for treatment</h4>
+                <h4 className="text-center mb-5 text-primary">Here is some most of the visited place here we are provided world class services day by day</h4>
                 <Row xs={1} md={2} xl={2} className="g-4">
                     <Col>
                         <img className="img-style" src={plac1} alt="" />
@@ -54,7 +55,7 @@ const Place = () => {
                     </Col>
                 </Row>
             </div>
-
+            <Footer></Footer>
         </div>
     );
 };

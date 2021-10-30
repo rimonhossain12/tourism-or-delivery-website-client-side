@@ -18,16 +18,21 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Router>
-          <Home></Home>
           <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/place">
+              <Place></Place>
+            </Route>
             <Route path="/about">
               <About></About>
             </Route>
             <Route path="/blog">
               <Blog></Blog>
-            </Route>
-            <Route path="/place">
-              <Place></Place>
             </Route>
           </Switch>
         </Router>
