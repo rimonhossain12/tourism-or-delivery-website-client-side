@@ -4,9 +4,10 @@ import LoadService from '../LoadService/LoadService';
 import './Service.css';
 
 const Service = () => {
+
     const [services, setService] = useState([]);
     useEffect(() => {
-        fetch('/product.json')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setService(data));
 

@@ -12,6 +12,9 @@ const Home = () => {
             <Header></Header>
              <Service></Service>
             <Clients></Clients>
+            <br /><br />
+            
+            <br /><br /><br />  <br /><br /><br />  <br /><br /><br />
             <Footer></Footer>
         </div>
     );

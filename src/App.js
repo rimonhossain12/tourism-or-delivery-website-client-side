@@ -11,6 +11,8 @@ import Place from './Components/Place/Place';
 import Login from './Components/shared/Login/Login';
 import NotFound from './Components/shared/NotFound/NotFound';
 import Order from './Components/Order/Order';
+import Service from './Components/Home/Service/Service';
+import UserFrom from './Components/Home/UseFrom/UserFrom';
 
 
 function App() {
@@ -37,6 +39,9 @@ function App() {
           <Route path="/login">
           <Login></Login>
           </Route>
+          <Route path="/service">
+            <UserFrom></UserFrom>
+            </Route>
           <Route exact ="*">
             <NotFound></NotFound>
           </Route>
@@ -46,5 +51,9 @@ function App() {
     </div>
   );
 }
+
+/* 
+ServicesCollection
+*/
 
 export default App;
