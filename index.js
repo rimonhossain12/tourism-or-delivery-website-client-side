@@ -1,19 +1,35 @@
 const service = [
-    { id: '0', name: "Zoo", vistingPeople: '2000',location:'Japan', img:'https://t4.ftcdn.net/jpg/02/19/39/23/240_F_219392358_BmxOFbEOD8FmsMEbVan4Vz2T38nqDeeE.jpg',price:'$120'},
+   {
+        name: 'Amsterdam', country: 'Holland', description:'Travelers from all around the world agree that there’s something dreamy and enigmatic about this city. Be it the art, the culture, or the ruins of The Forum and the Colosseum that evoke the power of the ancient Roman Empire. This city top the list when we talk about the must visit places in the world,',
+        img:'https://blog.thomascook.in/wp-content/uploads/2017/11/1.Rome-Italy-e1521254972695.jpg',
+        price:'$1500'
+   },
 
+    {
+        name: 'Vatican City,', country: 'USA', description: 'The centerpiece of Christianity is unlike what you imagine it to be. Vatican City’s environment is nothing that one can call religiously dull and gloomy. The vibrant atmosphere of the smallest country in the world is full of surprises for the travelers.',
+        img: 'https://blog.thomascook.in/wp-content/uploads/2017/11/2.-vatican-city--e1521255022971.jpg',
+        price: '$1700'
+    },
+    {
+        name: 'Sydney', country: 'Australia', description: 'The centerpiece of Christianity is unlike what you imagine it to be. Vatican City’s environment is nothing that one can call religiously dull and gloomy. The vibrant atmosphere of the smallest country in the world is full of surprises for the travelers.',
+        img: 'https://blog.thomascook.in/wp-content/uploads/2017/11/3.-australia--e1521255079904.jpg',
+        price: '$1200'
+    },
+    {
+        name: 'Singapore', country: 'Singapore', description: 'Exploring the cleanest place in Asia is a grand experience that one should not miss visiting. This modern island has every comfort and luxury that a traveler would wish for. Singapore has an amazing skyline and you could best enjoy that from the Giant Ferris Wheel.',
+        img: 'https://blog.thomascook.in/wp-content/uploads/2017/11/4.-singapore-e1521255125338.jpg',
+        price: '$1800'
+    },
 
-    { id: '1', name: "Hill", vistingPeople: '2000',location:"Russia",mg:'https://t3.ftcdn.net/jpg/00/86/57/38/240_F_86573887_DEkIgYFc1gv6Jfxm6oPHEET3YkBIHKbL.jpg',price:'$100'},
+    {
+        name: 'London', country: 'England', description: 'The city of London effortlessly mingles the antique and the contemporary, through a dizzying array of sights, smells, and sounds. This timeless city has something for everyone, from the Buckingham Palace and Westminster Abbey.',
+        img: 'https://blog.thomascook.in/wp-content/uploads/2017/11/5.-london--e1521255176865.jpg',
+        price: '$1800'
+    },
+    {
+        name: 'Lucerne', country: 'Switzerland', description: 'TIt is a charming quaint town of Switzerland known for its colorful vistas and gondola rides on the snow filled mountains. Switzerland is another beautiful destination that should be a part of your – must visit countries list. The beautiful Lucerne Lake, Chapel Bridge, Old Medieval Town',
+        img: 'https://blog.thomascook.in/wp-content/uploads/2017/11/5.-london--e1521255176865.jpg',
+        price: '$1800'
+    },
 
-
-    { id: '2', name: "The Sea", vistingPeople: '5000', img:'https://t3.ftcdn.net/jpg/04/44/06/20/240_F_444062086_voVISq9yNN4WawmGTChhjDNXsXIul8iF.jpg',price:"$200"},
-
-
-    { id: '3', name: "The Forest", vistingPeople: '10000', img:'https://t3.ftcdn.net/jpg/02/74/77/74/240_F_274777402_6nA2wEir7lYq8nFwFUump7UUUUylKNKH.jpg',price:'$110'},
-
-
-    { id: '4', name: "The Colosseum, Rome", vistingPeople: '10000', img:'https://www.planetware.com/wpimages/2020/08/top-attractions-in-the-world-italy-rome-colosseum.jpg',price:'$80'},
-
-    { id: '5', name: "Stonehenge, England", vistingPeople: '10000', img:'https://www.planetware.com/wpimages/2020/08/top-attractions-in-the-world-england-stonehenge.jpg',price:'$150'},
-
-    { id: '6', name: "The Louvre, Paris", vistingPeople: '20000', img:'https://www.planetware.com/wpimages/2020/08/top-attractions-in-the-world-france-paris-louvre.jpg',price:'$80'},
 ]

@@ -1,9 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {
-  BrowserRouter as Router, Switch, Route, Link
-} from "react-router-dom";
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import Banner from './Components/Home/Banner/Banner';
 import Header from './Components/Home/Header/Header';
 import About from './Components/About/About';
@@ -13,7 +10,7 @@ import Blog from './Components/Blog/Blog';
 import Place from './Components/Place/Place';
 import Login from './Components/shared/Login/Login';
 import NotFound from './Components/shared/NotFound/NotFound';
-
+import Order from './Components/Order/Order';
 
 
 function App() {
@@ -31,9 +28,9 @@ function App() {
             <Route path="/place">
               <Place></Place>
             </Route>
-            <Route path="/about">
-              <About></About>
-            </Route>
+            <Route path="/order">
+              <Order></Order>
+              </Route>
             <Route path="/blog">
               <Blog></Blog>
             </Route>

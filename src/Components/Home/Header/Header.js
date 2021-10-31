@@ -21,8 +21,8 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link as={HashLink} to="/home#home" className="text-primary fw-bold">Home</Nav.Link>
-              {/* <Nav.Link as={HashLink} to="/about#about" className="text-primary fw-bold">About</Nav.Link> */}
               <Nav.Link as={HashLink} to="/place#place" className="text-primary fw-bold">Place</Nav.Link>
+              <Nav.Link as={HashLink} to="/order#order" className="text-primary fw-bold">MyOrders</Nav.Link>
               <Nav.Link as={HashLink} to="/booking#booking" className="text-primary fw-bold">Booking</Nav.Link>
 
               {
