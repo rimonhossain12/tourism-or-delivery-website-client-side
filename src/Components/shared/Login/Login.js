@@ -7,7 +7,6 @@ import warningImg from '../../../images/place/login.jpg'
 import './Login.css';
 import useAuth from '../../../../src/hooks/useAuth';
 
-
 const Login = () => {
     const { signInUsingGoogle} = useAuth();
 

@@ -1,9 +1,17 @@
 import axios from 'axios';
+import { useHistory, useLocation } from 'react-router';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import './UseFrom.css';
 
 const UserFrom = () => {
+
+    // redirect for writing this code
+    // const location = useLocation();
+    // const history = useHistory();
+    // const redirect_uri = location?.state?.from || "/home";
+
+
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         console.log(data)
