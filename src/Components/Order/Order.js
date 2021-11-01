@@ -17,5 +17,18 @@ const Order = () => {
         </div>
     );
 };
+/* {email:req.params.email} 
+
+/myOrder/:email
+
+
+/myOrder/:email
+const query = {email:req.params.email}
+
+orderCollection.find(query).toArray()
+
+fetch(`http://localhost;5000/myOrder/$(user.email)`
+
+*/
 
 export default Order;
