@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Banner from './Components/Home/Banner/Banner';
 import Header from './Components/Home/Header/Header';
 import About from './Components/About/About';
@@ -10,11 +9,10 @@ import Blog from './Components/Blog/Blog';
 import Place from './Components/Place/Place';
 import Login from './Components/shared/Login/Login';
 import NotFound from './Components/shared/NotFound/NotFound';
-import Order from './Components/Order/Order';
 import Service from './Components/Home/Service/Service';
-import UserFrom from './Components/Home/UseFrom/UserFrom';
 import PlaceOrder from './Components/Home/PlaceOrder/PlaceOrder';
 import Booking from './Components/Home/Booking/Booking';
+import PrivateRoute from './Components/shared/PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -41,9 +39,9 @@ function App() {
             <Route path="/blog">
               <Blog></Blog>
             </Route>
-            <Route path="/booking">
+            <PrivateRoute path="/booking">
               <Booking></Booking>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>

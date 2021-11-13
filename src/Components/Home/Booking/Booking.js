@@ -1,43 +1,34 @@
-import React from 'react';
-import { useEffect } from 'react';
 import { Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router';
 import './Booking.css';
 
 
 const Booking = () => {
-    // const { register, handleSubmit } = useForm();
-    // const onSubmit = data => console.log(data);
-    // const {serviceId} = useParams();
-    // console.log(serviceId);
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/singleProduct/${serviceId}`)
-    //     .then(res => res.json())
-    //     .then(data => console.log(data));
-    // },[])
-
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => console.log(data);
 
     return (
+        <>
         <div className="container">
-            <h2>This is Booking</h2>,
+            <h3 className="mt-5 text-warning">This is PlaceOrder</h3>,<hr className="w-25 mx-auto" />
             <Row xs={1} md={2} className="g-4">
-               <div>
-                  <h4>ID Details Show Here:{/* serviceId */}</h4>
-               </div>
-               {/*  <div>
-                    <h3>This is Booking From</h3>
+                <div>
+                    <h4 className="fw-lighter">Your order products details</h4>
+                </div>
+                <div>
+                    <h3 className="fw-normal">This is Booking From</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input {...register("firstName", { required: true, maxLength: 20 })} />
-                        <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
-                        <input type="number" {...register("age", { min: 18, max: 99 })} />
+                        <input {...register("name", { required: true, maxLength: 20 })} placeholder="Place Name" />
+                        <input {...register("email", { pattern: /^[A-Za-z]+$/i })}  placeholder="Country Location"/>
+                        <input type="number" {...register("age", { min: 18, max: 99 })} placeholder="Ticket Price" />
+                        <input {...register("email", { pattern: /^[A-Za-z]+$/i })} placeholder="Place Description" />
                         <input type="submit" />
                     </form>
-                </div> */}
+                </div>
             </Row>
-           
         </div>
-    );
+        </>
+  );
 };
 
 export default Booking;

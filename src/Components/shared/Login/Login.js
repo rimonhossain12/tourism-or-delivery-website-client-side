@@ -30,7 +30,7 @@ const Login = () => {
                <div className="warning-style">
                     <img className="waring-img" src={warningImg} alt="not found images" /> <br />
                     <h4 className="text-primary">Please Login</h4>
-                    <button onClick={loginWithGoogle} type="button" class="btn btn-primary badge rounded-pill"><AiFillGoogleCircle className="fs-1 text-light me-2 p-2" />Google Sign In</button>
+                    <button onClick={loginWithGoogle} type="button" class="btn btn-primary badge rounded-pill text-center"><AiFillGoogleCircle className="fs-1 text-light" />Google Sign In</button>
                </div>
             </div>
            <Footer></Footer>
