@@ -13,6 +13,8 @@ import NotFound from './Components/shared/NotFound/NotFound';
 import Order from './Components/Order/Order';
 import Service from './Components/Home/Service/Service';
 import UserFrom from './Components/Home/UseFrom/UserFrom';
+import PlaceOrder from './Components/Home/PlaceOrder/PlaceOrder';
+import Booking from './Components/Home/Booking/Booking';
 
 
 function App() {
@@ -30,18 +32,24 @@ function App() {
             <Route path="/place">
               <Place></Place>
             </Route>
+            <Route exact path="/service/:serviceId">
+              <Service></Service>
+            </Route>
             <Route path="/order">
-              <Order></Order>
+              <PlaceOrder></PlaceOrder>
             </Route>
             <Route path="/blog">
               <Blog></Blog>
             </Route>
+            <Route path="/booking">
+              <Booking></Booking>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/service">
+            {/* <Route path="/service">
               <UserFrom></UserFrom>
-            </Route>
+            </Route> */}
             <Route path="*">
               <NotFound></NotFound>
             </Route>

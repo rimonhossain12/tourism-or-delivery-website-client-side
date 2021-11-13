@@ -14,29 +14,29 @@ const useFirebase = () => {
     // google sign in method
     const signInUsingGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
-       return signInWithPopup(auth,googleProvider)
-       .catch((error) => setError(error.message))
-       .finally(() => setIsLoading(false));
+        return signInWithPopup(auth, googleProvider)
+            .catch((error) => setError(error.message))
+            .finally(() => setIsLoading(false));
     }
 
     // google logout;
     const logOut = () => {
         setIsLoading(true);
         signOut(auth)
-        .then(() => {
-            setUser('');
-        }).finally(() => setIsLoading(false))
+            .then(() => {
+                setUser('');
+            }).finally(() => setIsLoading(false))
     }
 
     useEffect(() => {
-        onAuthStateChanged(auth,user => {
-            if(user){
+        onAuthStateChanged(auth, user => {
+            if (user) {
                 setUser(user);
-            }else{
+            } else {
                 setUser({});
             }
         })
-    },[])
+    }, [])
 
 
     return {

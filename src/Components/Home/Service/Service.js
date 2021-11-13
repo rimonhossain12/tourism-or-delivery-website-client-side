@@ -10,7 +10,6 @@ const Service = () => {
         fetch('https://dreadful-mummy-01795.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setService(data));
-
     }, [])
     return (
         <div>

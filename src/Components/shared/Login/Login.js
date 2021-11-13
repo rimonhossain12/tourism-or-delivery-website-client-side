@@ -19,6 +19,7 @@ const Login = () => {
     const loginWithGoogle = () => {
         signInUsingGoogle()
             .then(result => {
+                console.log(result);
                 history.push(redirect_uri);
             })
     }

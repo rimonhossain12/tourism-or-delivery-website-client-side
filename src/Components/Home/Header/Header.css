@@ -14,3 +14,8 @@
     /* margin: auto; */
 
 }
+.nav-img{
+    margin: auto;
+    border-radius: 50%;
+    width: 50%;
+}

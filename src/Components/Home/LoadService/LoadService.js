@@ -16,7 +16,7 @@ const LoadService = ({ service }) => {
                 <h5 className="text-primary fw-normal">Location: {country}</h5>
                 <h4 className="text-primary fw-normal">Ticket: {price}</h4>
                 <p className="text-start lh-base">description:{description}</p>
-               <Link to="/order">
+                <Link to={`/booking/${service._id}`}>
                     <button className="badge rounded-pill bg-warning text-dark btn-style"><AiFillEdit className="icon-size" /> Booking Now</button>
                </Link>
 
