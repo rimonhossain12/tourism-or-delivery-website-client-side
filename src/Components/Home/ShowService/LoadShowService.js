@@ -1,13 +1,9 @@
 import React from 'react';
-import './LoadService.css';
-import { AiFillEdit } from "react-icons/ai";
-import useAuth from '../../../hooks/useAuth';
 import { Link } from 'react-router-dom';
+import { AiFillEdit } from "react-icons/ai";
 
-const LoadService = ({ service }) => {
+const LoadShowService = ({service}) => {
     const { name, country, description, img, price } = service;
-    // google sing in method using from order users
-    const { user } = useAuth();
     return (
         <div>
             <div className="g-4 service-style">
@@ -18,10 +14,10 @@ const LoadService = ({ service }) => {
                 <p className="text-start lh-base">description:{description}</p>
                 <Link to={`/booking/${service._id}`}>
                     <button className="badge rounded-pill bg-warning text-dark btn-style"><AiFillEdit className="icon-size" /> Booking Now</button>
-               </Link>
+                </Link>
             </div>
         </div>
     );
 };
 
-export default LoadService;
+export default LoadShowService;

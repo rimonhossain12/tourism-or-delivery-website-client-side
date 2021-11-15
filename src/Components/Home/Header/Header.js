@@ -19,8 +19,8 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link as={HashLink} to="/home#home" className="text-primary fw-bold">Home</Nav.Link>
-              <Nav.Link as={HashLink} to="/loadingService#loadingService" className="text-primary fw-bold">service</Nav.Link>
-              <Nav.Link as={HashLink} to="/about#about" className="text-primary fw-bold">about us</Nav.Link>
+              <Nav.Link as={HashLink} to="/showService#showService" className="text-primary fw-bold">service</Nav.Link>
+              <Nav.Link as={HashLink} to="/about#about" className="text-primary fw-bold">aboutUs</Nav.Link>
               {
                 user.email &&
                 <>

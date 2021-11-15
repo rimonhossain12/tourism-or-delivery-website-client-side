@@ -1,16 +1,10 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Carousel, Col, Row } from 'react-bootstrap';
 import Header from '../Home/Header/Header';
 import './About.css';
-import TouchCarousel from 'react-touch-carousel'
-import { IoBookOutline, IoMan } from "react-icons/io5";
-import img1 from '../../images/carosule/1.jpeg';
-import img2 from '../../images/carosule/2.jpeg';
-import img3 from '../../images/carosule/3.jpeg';
-import img4 from '../../images/carosule/4.jpeg';
+import { FaHandHoldingUsd, FaBookOpen, FaPeopleArrows } from "react-icons/fa";
 import Footer from '../Footer/Footer';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import img1 from '../../images/carosule/2.jpeg';
 
 
 const About = () => {
@@ -34,9 +28,53 @@ const About = () => {
                     </Col>
                 </Row>
             </div>
-            {/* React small carousel */}
-        
-           <Footer></Footer>
+            {/* React icon section */}
+
+            <div className="container">
+                <Row xs={1} sm={1} md={2} lg={3} className="g-4">
+                    <Col className="d-flex">
+                        <div className="icon-bg">
+                            <span className="icon-size">
+                                <FaHandHoldingUsd />
+                            </span>
+
+                        </div>
+                        <div className="text-start ms-1">
+                            <p> Quis autem vel eum iure <br /> reprehenderit qui in ea voluptate velit</p>
+                        </div>
+                    </Col>
+                    <Col className="d-flex">
+                        <div className="icon-bg">
+                            <span className="icon-size"> <FaBookOpen /></span>
+                        </div>
+                        <div className="text-start ms-1">
+                            <p> Quis autem vel eum iure <br /> reprehenderit qui in ea voluptate velit</p>
+                        </div>
+                    </Col>
+                    <Col className="d-flex">
+                        <div className="icon-bg">
+                            <span className="icon-size">
+                                <FaPeopleArrows />
+                            </span>
+
+                        </div>
+                        <div className="text-start ms-1">
+                            <p> Quis autem vel eum iure <br /> reprehenderit qui in ea voluptate velit</p>
+                        </div>
+                    </Col>
+                </Row>
+            </div>
+
+            {/* our partner */}
+
+            <div className="container mt-5">
+                <div className="container ms-5 me-5">
+                    <p className="text-danger fw-bold">OUR ASSOCAITES</p>
+                    <h2 className="fs-1 text-dark fw-bold">PARTNER'S AND CLIENTS</h2>
+                    <p className="text-dark mx-auto fst-normal lh-base">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat <br />. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
+                </div>
+            </div>
+            <Footer></Footer>
         </div>
     );
 }

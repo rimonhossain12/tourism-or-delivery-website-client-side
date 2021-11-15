@@ -11,6 +11,7 @@ import PlaceOrder from './Components/Home/PlaceOrder/PlaceOrder';
 import Booking from './Components/Home/Booking/Booking';
 import PrivateRoute from './Components/shared/PrivateRoute/PrivateRoute';
 import About from './Components/About/About';
+import ShowService from './Components/Home/ShowService/ShowService';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About></About>
+            </Route>
+            <Route path="/showService">
+              <ShowService></ShowService>
             </Route>
             <Route path="/order">
               <PlaceOrder></PlaceOrder>
