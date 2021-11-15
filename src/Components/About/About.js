@@ -74,7 +74,7 @@ const About = () => {
             {/* our partner */}
 
             <div className="container mt-5">
-                <div className="container ms-5 me-5">
+                <div className="container">
                     <p className="text-danger fw-bold">OUR ASSOCAITES</p>
                     <h2 className="fs-1 text-dark fw-bold">PARTNER'S AND CLIENTS</h2>
                     <p className="text-dark mx-auto fst-normal lh-base">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat <br />. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>

@@ -32,12 +32,6 @@
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    /* width: 100%; */
+    width: 100%;
     height: 50vh;
-}
-
-.review-counting{
-    background-color: rgba(250, 128, 114, 0.808);
-    /* height: 120px; */
-    width: 50%;
 }
