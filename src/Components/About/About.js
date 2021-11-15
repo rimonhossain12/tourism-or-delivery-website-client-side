@@ -9,6 +9,7 @@ import img2 from '../../images/carosule/2.png'
 import img3 from '../../images/carosule/3.png'
 import img4 from '../../images/carosule/4.png'
 import img5 from '../../images/carosule/5.png'
+import { FaPeopleCarry, FaAward, FaSnowboarding, FaRegEdit } from "react-icons/fa";
 
 
 
@@ -94,6 +95,12 @@ const About = () => {
                         <img src={img4} alt="" className="img-fluid" />
                     </Col>
                 </Row>
+            </div>
+            <div className="about-bg-img mt-5">
+                <div className="container">
+                    <h1 className="text-uppercase text-light fw-bold mt-5">GO Travel discover. <br /> Remember us!!</h1>
+                    <p className="text-light text-secondary w-75 mx-auto">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
+                </div>
             </div>
             <Footer></Footer>
         </div>
