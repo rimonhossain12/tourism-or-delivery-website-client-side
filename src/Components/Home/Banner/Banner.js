@@ -23,8 +23,7 @@ const Banner = () => {
                             <Nav.Link href="/home#home" className="text-info fw-bold">Home</Nav.Link>
                             <Nav.Link href="/home#home" className="text-primary fw-bold">Home</Nav.Link>
                             <Nav.Link href="/about#about" className="text-primary fw-bold">About</Nav.Link>
-                            <Nav.Link href="/service#service" className="text-primary fw-bold">Service</Nav.Link>
-                            
+                            <Nav.Link href="/service#service" className="text-primary fw-bold">Service</Nav.Link>     
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

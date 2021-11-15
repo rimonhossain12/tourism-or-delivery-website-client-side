@@ -9,6 +9,7 @@ import './Header.css';
 const Header = () => {
   // Google sign in using context api
   const { user, logOut } = useAuth();
+  console.log(user.photoURL);
 
   return (
     <div className="bg-img">
@@ -26,7 +27,7 @@ const Header = () => {
                 <>
                   <Nav.Link as={HashLink} to="/order#order" className="text-primary fw-bold">MyOrders</Nav.Link>
                   <Nav.Link as={HashLink} to="/booking#booking" className="text-primary fw-bold">PlaceOrder</Nav.Link>
-                  < NavDropdown title="UserDetails" id="basic-nav-dropdown" className="text-primary fw-bold w-50">
+                  < NavDropdown title="Profile" id="basic-nav-dropdown" className="text-primary fw-bold w-50">
                     <NavDropdown.Item href="#action/3.1">
                       <img className="nav-img img-fluid" src={user.photoURL} alt="NTU Badge" />
                     </NavDropdown.Item>

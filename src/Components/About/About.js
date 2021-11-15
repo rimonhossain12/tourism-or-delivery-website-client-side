@@ -4,7 +4,12 @@ import Header from '../Home/Header/Header';
 import './About.css';
 import { FaHandHoldingUsd, FaBookOpen, FaPeopleArrows } from "react-icons/fa";
 import Footer from '../Footer/Footer';
-import img1 from '../../images/carosule/2.jpeg';
+import img1 from '../../images/carosule/1.png'
+import img2 from '../../images/carosule/2.png'
+import img3 from '../../images/carosule/3.png'
+import img4 from '../../images/carosule/4.png'
+import img5 from '../../images/carosule/5.png'
+
 
 
 const About = () => {
@@ -73,6 +78,22 @@ const About = () => {
                     <h2 className="fs-1 text-dark fw-bold">PARTNER'S AND CLIENTS</h2>
                     <p className="text-dark mx-auto fst-normal lh-base">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat <br />. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
                 </div>
+            </div>
+            <div className="container">
+                <Row xs={1} sm={1} md={2} lg={4} className="g-4">
+                    <Col>
+                        <img src={img1} className="img-fluid" alt="" />
+                    </Col>
+                    <Col>
+                        <img src={img2} alt="" className="img-fluid" />
+                    </Col>
+                    <Col>
+                        <img src={img3} alt="" className="img-fluid" />
+                    </Col>
+                    <Col>
+                        <img src={img4} alt="" className="img-fluid" />
+                    </Col>
+                </Row>
             </div>
             <Footer></Footer>
         </div>
