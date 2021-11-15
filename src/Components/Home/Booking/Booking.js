@@ -2,11 +2,9 @@ import { Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import './Booking.css';
 
-
 const Booking = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
-
     return (
         <>
         <div className="container">

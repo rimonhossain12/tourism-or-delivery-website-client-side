@@ -1,0 +1,38 @@
+.about-para-style{
+    color: #101F46;
+}
+
+.icon-bg-style{
+    background-color:'#0791BE';
+    width:'25%';
+}
+.icon-style{
+    font-size:1.5rem;
+}
+
+/*   rm -rf node_modules/ */
+
+
+/* style for carousel */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel {
+    padding: 10px 10px 0;
+    border-radius: 4px;
+    width: 375px;
+    margin: auto;
+}
+
+.carousel__main {
+    border-radius: 4px;
+    height: 110px;
+}
+
+.demo-item {
+    height: 110px;
+}
+

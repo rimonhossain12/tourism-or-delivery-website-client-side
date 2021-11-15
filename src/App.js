@@ -1,8 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Banner from './Components/Home/Banner/Banner';
-import Header from './Components/Home/Header/Header';
-import About from './Components/About/About';
 import Home from './Components/Home/Home/Home';
 import AuthProvider from './context/AuthProvider';
 import Blog from './Components/Blog/Blog';
@@ -13,6 +10,7 @@ import Service from './Components/Home/Service/Service';
 import PlaceOrder from './Components/Home/PlaceOrder/PlaceOrder';
 import Booking from './Components/Home/Booking/Booking';
 import PrivateRoute from './Components/shared/PrivateRoute/PrivateRoute';
+import About from './Components/About/About';
 
 
 function App() {
@@ -33,6 +31,9 @@ function App() {
             <Route exact path="/service/:serviceId">
               <Service></Service>
             </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
             <Route path="/order">
               <PlaceOrder></PlaceOrder>
             </Route>
@@ -45,9 +46,6 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            {/* <Route path="/service">
-              <UserFrom></UserFrom>
-            </Route> */}
             <Route path="*">
               <NotFound></NotFound>
             </Route>
@@ -57,9 +55,7 @@ function App() {
     </div>
   );
 }
-
 /* 
 ServicesCollection
 */
-
 export default App;
