@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Card, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
@@ -19,9 +20,28 @@ const Booking = () => {
     const { user } = useAuth();
     console.log(user);
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         console.log(data);
+        axios.post('http://localhost:5000/userOrder',data)
+        .then(res => {
+            if (res.data.insertedId){
+                alert('data is added successfully');
+                reset();
+            }
+        })
+        //  console.log('hitting the submit button');
+      /*   fetch('http://localhost:5000/userOrder', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            }) */
     }
 
     return (
