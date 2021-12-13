@@ -1,13 +1,12 @@
 import React from 'react';
 import './LoadService.css';
 import { AiFillEdit } from "react-icons/ai";
-import useAuth from '../../../hooks/useAuth';
 import { Link } from 'react-router-dom';
 
 const LoadService = ({ service }) => {
     const { name, country, description, img, price } = service;
-    // google sing in method using from order users
-    const { user } = useAuth();
+    
+
     return (
         <div>
             <div className="g-4 service-style">

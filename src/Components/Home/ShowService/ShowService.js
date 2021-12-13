@@ -8,7 +8,8 @@ import LoadShowService from './LoadShowService';
 const ShowService = () => {
     const [services, setService] = useState([]); 
     useEffect(() => {
-        fetch('https://dreadful-mummy-01795.herokuapp.com/services')
+        // fetch('https://dreadful-mummy-01795.herokuapp.com/services')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setService(data));
     }, [])
