@@ -29,6 +29,7 @@ const PlaceOrder = () => {
                         <thead>
                             <tr>
                                 <th>Number</th>
+                                <th>IMG</th>
                                 <th>Country Name</th>
                                 <th>Name</th>
                                 <th>Email</th>
@@ -41,12 +42,12 @@ const PlaceOrder = () => {
                                 orders.map((order, index) => <>
                                     <tr>
                                         <td>{index + 1}</td>
-                                        {/* <td><img src={order.img} className="img-fluid w-25" alt="" /></td> */}
+                                        <td><img src={order.img} style={{height:'50px',width:'100%'}} alt="" /></td>
                                         <td>{order.countryName}</td>
                                         <td>{order.name}</td>
                                         <td>{order.email}</td>
                                         <td className="fw-bold text-danger">pending...</td>
-                                        <td className="btn btn-danger fw-bold text-white">Cancel</td>
+                                        <td className="btn my-3 btn-danger fw-bold text-white">Cancel</td>
                                     </tr>
                                 </>)
                             }
@@ -55,7 +56,7 @@ const PlaceOrder = () => {
                 </div>
             </div>
             <Footer></Footer>
-        </div>
+        </div>  
     );
 };
 
