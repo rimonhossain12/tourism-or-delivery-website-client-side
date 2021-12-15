@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../Footer/Footer';
 import Header from '../Header/Header';
@@ -18,6 +19,11 @@ const PlaceOrder = () => {
             .then(res => res.json())
             .then(data => setOrder(data));
     }, []);
+
+    // Cancel product url
+    const handleCancelButton = id => {
+        console.log('button click',id);
+    }
 
     return (
         <div>
@@ -42,12 +48,12 @@ const PlaceOrder = () => {
                                 orders.map((order, index) => <>
                                     <tr>
                                         <td>{index + 1}</td>
-                                        <td><img src={order.img} style={{height:'50px',width:'100%'}} alt="" /></td>
+                                        <td><img src={order.img} style={{ height: '50px', width: '100%' }} alt="" /></td>
                                         <td>{order.countryName}</td>
                                         <td>{order.name}</td>
                                         <td>{order.email}</td>
                                         <td className="fw-bold text-danger">pending...</td>
-                                        <td className="btn my-3 btn-danger fw-bold text-white">Cancel</td>
+                                        <button onClick={() => handleCancelButton(order._id)} className='btn btn-danger my-2 fw-bold'>Cancel</button>
                                     </tr>
                                 </>)
                             }
@@ -56,7 +62,7 @@ const PlaceOrder = () => {
                 </div>
             </div>
             <Footer></Footer>
-        </div>  
+        </div>
     );
 };
 
