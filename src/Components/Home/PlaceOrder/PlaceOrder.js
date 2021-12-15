@@ -1,11 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../Footer/Footer';
 import Header from '../Header/Header';
 import './PlaceOrder.css';
+import { MdDelete } from "react-icons/md";
 
 const PlaceOrder = () => {
     const [orders, setOrder] = useState([]);
@@ -18,11 +18,31 @@ const PlaceOrder = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data));
-    }, []);
+    }, [url, email]);
 
     // Cancel product url
     const handleCancelButton = id => {
-        console.log('button click',id);
+        console.log('button is click');
+        const processed = window.confirm('Are you sure cancel your tour?');
+       if(processed){
+           const url = `http://localhost:5000/cancel/${id}`
+           fetch(url, {
+               method: 'DELETE',
+               headers: {
+                   'content-type': 'application/json'
+               },
+               body: JSON.stringify(Date)
+           })
+               .then(res => res.json())
+               .then(data => {
+                   console.log('data', data);
+                   if (data.deletedCount > 0) {
+                       const remainingOrders = orders.filter( order => order._id !== id);
+                       setOrder(remainingOrders);
+                   }
+               })
+       }
+
     }
 
     return (
@@ -39,6 +59,7 @@ const PlaceOrder = () => {
                                 <th>Country Name</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                 <th>Price</th>
                                 <th>Status</th>
                                 <th>Deletion</th>
                             </tr>
@@ -52,8 +73,9 @@ const PlaceOrder = () => {
                                         <td>{order.countryName}</td>
                                         <td>{order.name}</td>
                                         <td>{order.email}</td>
+                                        <td>${order.price}</td>
                                         <td className="fw-bold text-danger">pending...</td>
-                                        <button onClick={() => handleCancelButton(order._id)} className='btn btn-danger my-2 fw-bold'>Cancel</button>
+                                        <button onClick={() => handleCancelButton(order._id)} className='btn btn-danger my-2 fw-bold'><MdDelete size={25} />Cancel</button>
                                     </tr>
                                 </>)
                             }

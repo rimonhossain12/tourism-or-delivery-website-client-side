@@ -94,8 +94,8 @@ const Booking = () => {
                             <input {...register("name")} value={user.displayName} />
                             <input {...register("img")} placeholder="images url" />
                             <input {...register("countryName")} placeholder="visited country name" />
-                            <input type="number" placeholder="price" />
-                            <input type="submit" />
+                            <input {...register("price")} placeholder="price" />
+                            <input type="submit" value="Order"/>
                         </form>
                     </div>
                 </Row>
