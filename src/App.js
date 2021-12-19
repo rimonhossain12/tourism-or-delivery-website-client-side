@@ -30,7 +30,7 @@ function App() {
             <Route path="/place">
               <Place></Place>
             </Route>
-            <Route exact path="/service/:serviceId">
+            <Route path="/service/:serviceId">
               <Service></Service>
             </Route>
             <Route path="/about">
@@ -39,15 +39,15 @@ function App() {
             <Route path="/showService">
               <ShowService></ShowService>
             </Route>
+            <Route path="/blog">
+              <Blog></Blog>
+            </Route>
             <Route path="/order">
               <PlaceOrder></PlaceOrder>
             </Route>
             <PrivateRoute path="/mangeOrder">
               <MangeOrder></MangeOrder>
             </PrivateRoute>
-            <Route path="/blog">
-              <Blog></Blog>
-            </Route>
             <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
             </PrivateRoute>

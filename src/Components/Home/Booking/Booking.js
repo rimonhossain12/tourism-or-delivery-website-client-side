@@ -18,7 +18,6 @@ const Booking = () => {
     }, [serviceId]);
 
     const { user } = useAuth();
-    console.log(user);
 
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {

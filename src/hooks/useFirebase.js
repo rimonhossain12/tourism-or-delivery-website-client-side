@@ -7,25 +7,23 @@ initializeAuthentication();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
-    const [error, setError] = useState('');
+    // const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
+    const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
 
     // google sign in method
-    const signInUsingGoogle = () => {
-        const googleProvider = new GoogleAuthProvider();
-        return signInWithPopup(auth, googleProvider)
-            .catch((error) => setError(error.message))
-            .finally(() => setIsLoading(false));
-    }
-
-    // google logout;
-    const logOut = () => {
+    const signInUsingGoogle = (location,history) => {
         setIsLoading(true);
-        signOut(auth)
-            .then(() => {
-                setUser('');
-            }).finally(() => setIsLoading(false))
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+                // setUser(user);
+                // setAuthError('');
+            }).catch((error) => {
+                // setAuthError(error.message);
+            }).finally(() => setIsLoading(false));
     }
 
     useEffect(() => {
@@ -35,14 +33,25 @@ const useFirebase = () => {
             } else {
                 setUser({});
             }
+            setIsLoading(false);
         })
-    }, [])
+    }, [auth])
 
+    // google logout;
+    const logOut = () => {
+        setIsLoading(true);
+        signOut(auth).then(() => {
+            // Sign-out successful.
+        }).catch((error) => {
+            // An error happened.
+        }).finally(() => setIsLoading(false));
+
+    }
 
     return {
         signInUsingGoogle,
         user,
-        error,
+        // error,
         logOut,
         isLoading
 

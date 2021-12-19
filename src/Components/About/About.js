@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Col, Row } from 'react-bootstrap';
+import {  Col, Row } from 'react-bootstrap';
 import Header from '../Home/Header/Header';
 import './About.css';
 import { FaHandHoldingUsd, FaBookOpen, FaPeopleArrows } from "react-icons/fa";
@@ -8,9 +8,6 @@ import img1 from '../../images/carosule/1.png'
 import img2 from '../../images/carosule/2.png'
 import img3 from '../../images/carosule/3.png'
 import img4 from '../../images/carosule/4.png'
-import img5 from '../../images/carosule/5.png'
-import { FaPeopleCarry, FaAward, FaSnowboarding, FaRegEdit } from "react-icons/fa";
-
 
 
 const About = () => {
