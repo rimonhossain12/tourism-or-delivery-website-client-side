@@ -42,9 +42,9 @@ function App() {
             <Route path="/blog">
               <Blog></Blog>
             </Route>
-            <Route path="/order">
+            <PrivateRoute path="/order">
               <PlaceOrder></PlaceOrder>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/mangeOrder">
               <MangeOrder></MangeOrder>
             </PrivateRoute>

@@ -1,0 +1,15 @@
+.circular--landscape {
+    display: inline-block;
+    position: relative;
+    margin: 10px auto;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.circular--landscape img {
+    width: auto;
+    height: 100%;
+    margin-left: -50%;
+}

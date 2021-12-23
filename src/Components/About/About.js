@@ -67,17 +67,16 @@ const About = () => {
                     </Col>
                 </Row>
             </div>
-
             {/* our partner */}
 
-            <div className="container mt-5">
-                <div className="container">
-                    <p className="text-danger fw-bold">OUR ASSOCAITES</p>
+            <div className="container">
+                <div className="container mt-5">
+                    <p className="text-danger fw-bold mt-4">OUR ASSOCAITES</p>
                     <h2 className="fs-1 text-dark fw-bold">PARTNER'S AND CLIENTS</h2>
                     <p className="text-dark mx-auto fst-normal lh-base">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat <br />. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
                 </div>
             </div>
-            <div className="container">
+            <div className="container mt-5 mb-5">
                 <Row xs={1} sm={1} md={2} lg={4} className="g-4">
                     <Col>
                         <img src={img1} className="img-fluid" alt="" />
@@ -93,10 +92,10 @@ const About = () => {
                     </Col>
                 </Row>
             </div>
-            <div className="about-bg-img mt-5">
-                <div className="container">
+            <div className="about-bg-img">
+                <div className="container travel-div mt-5">
                     <h1 className="text-uppercase text-light fw-bold mt-5">GO Travel discover. <br /> Remember us!!</h1>
-                    <p className="text-light text-secondary w-75 mx-auto">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
+                    <p className="text-light text-secondary w-75 mx-auto mt-5">Mollit voluptatem perspiciatis convallis elementum corporis quo veritatis aliquid blandit, blandit torquent, odit placeat. Adipiscing repudiandae eius cursus? Nostrum magnis maxime curae placeat.</p>
                 </div>
             </div>
             <Footer></Footer>

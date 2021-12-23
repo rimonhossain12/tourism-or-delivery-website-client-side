@@ -5,6 +5,7 @@ import useAuth from '../../../hooks/useAuth';
 import Footer from '../../Footer/Footer';
 import './PlaceOrder.css';
 import { MdDelete } from "react-icons/md";
+import Header from '../Header/Header';
 
 const PlaceOrder = () => {
     const [orders, setOrder] = useState([]);
@@ -46,6 +47,7 @@ const PlaceOrder = () => {
 
     return (
         <div>
+            <Header></Header>
             <div className="container mt-5">
                 <h4 className="text-info mb-3">Dear Traveller Your order list !</h4>
                 <div className="container">
