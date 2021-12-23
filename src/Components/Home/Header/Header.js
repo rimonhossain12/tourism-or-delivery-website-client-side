@@ -21,13 +21,23 @@ const Header = () => {
             <Nav className="ms-auto">
               <Nav.Link as={HashLink} to="/home#home" className="text-primary fw-bold">Home</Nav.Link>
               <Nav.Link as={HashLink} to="/showService#showService" className="text-primary fw-bold">service</Nav.Link>
-              <Nav.Link as={HashLink} to="/about#about" className="text-primary fw-bold">aboutUs</Nav.Link>
+              <Nav.Link as={HashLink} to="/about#about" className="text-primary fw-bold">AboutUs</Nav.Link>
               {
                 user.email &&
                 <>
-                  
+
                   <Nav.Link as={HashLink} to="/order#order" className="text-primary fw-bold">MyOrders</Nav.Link>
-                  <Nav.Link as={HashLink} to="/mangeOrder#mangeOrder" className="text-primary fw-bold">MangeOrder</Nav.Link>
+                  < NavDropdown title="DashBoard" id="basic-nav-dropdown" className="text-primary fw-bold w-50">
+                    <NavDropdown.Item href="#action/3.1">
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">
+                      <Nav.Link as={HashLink} to="/order#order" className="text-primary fw-bold">Add A service</Nav.Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">
+                      <Nav.Link as={HashLink} to="/mangeOrder#mangeOrder" className="text-primary fw-bold">Mange All Order</Nav.Link>
+                    </NavDropdown.Item>
+                  </NavDropdown>
+
                   < NavDropdown title="Profile" id="basic-nav-dropdown" className="text-primary fw-bold w-50">
                     <NavDropdown.Item href="#action/3.1">
                       <img className="nav-img img-fluid" src={user.photoURL} alt="NTU Badge" />

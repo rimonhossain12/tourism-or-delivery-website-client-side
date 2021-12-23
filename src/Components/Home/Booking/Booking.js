@@ -47,7 +47,7 @@ const Booking = () => {
         <>
             <Header></Header>
             <div className="container">
-                <h3 className="mt-5 text-warning">This is PlaceOrder</h3>,<hr className="w-25 mx-auto" />
+                <h3 className="mt-5 text-warning">This is Order Information Page</h3>,<hr className="w-25 mx-auto" />
                 <Row xs={1} md={2} className="g-4">
                     <div>
                         <h4 className="fw-lighter,text-start">Your order products details</h4>
@@ -94,7 +94,7 @@ const Booking = () => {
                             <input {...register("img")} placeholder="images url" />
                             <input {...register("countryName")} placeholder="visited country name" />
                             <input {...register("price")} placeholder="price" />
-                            <input type="submit" value="Order"/>
+                            <input type="submit" value="Place Order"/>
                         </form>
                     </div>
                 </Row>
