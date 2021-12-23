@@ -13,6 +13,7 @@ import PrivateRoute from './Components/shared/PrivateRoute/PrivateRoute';
 import About from './Components/About/About';
 import ShowService from './Components/Home/ShowService/ShowService';
 import MangeOrder from './Components/Home/MangeOrder/MangeOrder';
+import AddService from './Components/AddService/AddService';
 
 
 function App() {
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route path="/blog">
               <Blog></Blog>
+            </Route>
+            <Route path="/addService">
+              <AddService></AddService>
             </Route>
             <PrivateRoute path="/order">
               <PlaceOrder></PlaceOrder>

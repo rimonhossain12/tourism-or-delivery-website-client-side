@@ -31,7 +31,7 @@ const Header = () => {
                     <NavDropdown.Item href="#action/3.1">
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">
-                      <Nav.Link as={HashLink} to="/order#order" className="text-primary fw-bold">Add A service</Nav.Link>
+                      <Nav.Link as={HashLink} to="/addService#addService" className="text-primary fw-bold">Add A service</Nav.Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">
                       <Nav.Link as={HashLink} to="/mangeOrder#mangeOrder" className="text-primary fw-bold">Mange All Order</Nav.Link>
