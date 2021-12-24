@@ -13,7 +13,7 @@ const LoadService = ({ service }) => {
                 <img className="service-img" src={img} alt="" />
                 <h4 className="text-primary">Name: {name}</h4>
                 <h5 className="text-primary fw-normal">Location: {country}</h5>
-                <h4 className="text-primary fw-normal">Ticket: {price}</h4>
+                <h4 className="text-primary fw-normal">Ticket: ${price}</h4>
                 <p className="text-start lh-base">{description}</p>
                 <Link to={`/booking/${service._id}`}>
                     <button className="badge rounded-pill bg-warning text-dark btn-style s"><AiFillEdit className="icon-size" /> Booking Now</button>
