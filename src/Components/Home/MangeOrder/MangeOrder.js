@@ -9,7 +9,7 @@ const MangeOrder = () => {
     const [orders, setOrders] = useState([]);
     const { admin } = useAuth();
     useEffect(() => {
-        fetch('http://localhost:5000/userOrder')
+        fetch('https://dreadful-mummy-01795.herokuapp.com/userOrder')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
@@ -18,7 +18,7 @@ const MangeOrder = () => {
         console.log('button is click');
         const processed = window.confirm('Are you sure cancel your tour?');
         if (processed) {
-            const url = `http://localhost:5000/cancel/${id}`
+            const url = `https://dreadful-mummy-01795.herokuapp.com/cancel/${id}`
             fetch(url, {
                 method: 'DELETE',
                 headers: {

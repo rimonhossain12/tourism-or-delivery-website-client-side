@@ -2,7 +2,8 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import './Footer.css';
 import { BsFacebook, BsWhatsapp, BsTelephone, BsMessenger } from "react-icons/bs";
-import { FaCopyright } from "react-icons/fa";
+
+
 const Footer = () => {
     return (
         <div className="bg-style mt-5">

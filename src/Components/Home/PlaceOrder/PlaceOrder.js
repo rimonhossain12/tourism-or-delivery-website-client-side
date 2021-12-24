@@ -11,7 +11,7 @@ const PlaceOrder = () => {
     const [orders, setOrder] = useState([]);
     const { user } = useAuth();
     const email = user.email;
-    const url = `http://localhost:5000/users/${email}`;
+    const url = `https://dreadful-mummy-01795.herokuapp.com/users/${email}`;
     console.log(url);
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const PlaceOrder = () => {
         console.log('button is click');
         const processed = window.confirm('Are you sure cancel your tour?');
        if(processed){
-           const url = `http://localhost:5000/cancel/${id}`
+           const url = `https://dreadful-mummy-01795.herokuapp.com/cancel/${id}`
            fetch(url, {
                method: 'DELETE',
                headers: {

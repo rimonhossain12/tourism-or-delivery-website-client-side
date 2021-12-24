@@ -48,7 +48,7 @@ const useFirebase = () => {
     
     const saveUser = (email,displayName) => {
         const user = {email,displayName};
-        fetch('http://localhost:5000/users',{
+        fetch('https://dreadful-mummy-01795.herokuapp.com/users',{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
@@ -62,7 +62,7 @@ const useFirebase = () => {
     }
     // find admin
     useEffect(() => {
-        fetch(`http://localhost:5000/admin/${user.email}`)
+        fetch(`https://dreadful-mummy-01795.herokuapp.com/admin/${user.email}`)
         .then(res => res.json())
         .then(data => {
             console.log('admin role = ',data.admin);

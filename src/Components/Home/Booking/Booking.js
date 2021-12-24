@@ -12,7 +12,7 @@ const Booking = () => {
     const [service, setService] = useState({});
     const { serviceId } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/single/${serviceId}`)
+        fetch(`https://dreadful-mummy-01795.herokuapp.com/single/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [serviceId]);
@@ -22,7 +22,7 @@ const Booking = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/userOrder',data)
+        axios.post('https://dreadful-mummy-01795.herokuapp.com/userOrder',data)
         .then(res => {
             if (res.data.insertedId){
                 alert('data is added successfully');
@@ -30,7 +30,7 @@ const Booking = () => {
             }
         })
         //  console.log('hitting the submit button');
-      /*   fetch('http://localhost:5000/userOrder', {
+      /*   fetch('https://dreadful-mummy-01795.herokuapp.com/userOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
