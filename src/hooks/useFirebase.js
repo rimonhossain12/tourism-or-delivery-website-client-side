@@ -9,6 +9,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     // const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
+    const [admin,setAdmin] = useState(false);
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
 
@@ -17,12 +18,11 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
+                const user = result.user;
+                saveUser(user.email,user.displayName);
                 const destination = location?.state?.from || '/';
                 history.replace(destination);
-                // setUser(user);
-                // setAuthError('');
             }).catch((error) => {
-                // setAuthError(error.message);
             }).finally(() => setIsLoading(false));
     }
 
@@ -41,18 +41,40 @@ const useFirebase = () => {
     const logOut = () => {
         setIsLoading(true);
         signOut(auth).then(() => {
-            // Sign-out successful.
         }).catch((error) => {
-            // An error happened.
         }).finally(() => setIsLoading(false));
 
     }
+    
+    const saveUser = (email,displayName) => {
+        const user = {email,displayName};
+        fetch('http://localhost:5000/users',{
+            method:'PUT',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+    }
+    // find admin
+    useEffect(() => {
+        fetch(`http://localhost:5000/admin/${user.email}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log('admin role = ',data.admin);
+            setAdmin(data.admin);
+        })
+    },[user.email]);
 
     return {
         signInUsingGoogle,
         user,
-        // error,
         logOut,
+        admin,
         isLoading
 
     }

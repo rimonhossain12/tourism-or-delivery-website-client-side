@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import './Footer.css';
 import { BsFacebook, BsWhatsapp, BsTelephone, BsMessenger } from "react-icons/bs";
-
+import { FaCopyright } from "react-icons/fa";
 const Footer = () => {
     return (
         <div className="bg-style mt-5">
@@ -54,6 +54,9 @@ const Footer = () => {
                         </ul>
                     </Col>
                 </Row>
+            </div>
+            <div className='pb-3 mt-5'>
+                <p id="para-style"><span id="copy-right-style">&copy;</span>2022 programming-hero.All rights reversed by Rimon</p>
             </div>
         </div>
     );

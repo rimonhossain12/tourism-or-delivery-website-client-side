@@ -17,3 +17,13 @@
     padding: 5px;
    font-size: 2rem;
 }
+#para-style{
+    color: #CACFD2;
+    font-family: 'Pushster',
+    cursive;
+    /* font-family: 'Open Sans Condensed',
+    sans-serif; */
+}
+.copy-right-style{
+    font-size: 1.5rem;
+}
