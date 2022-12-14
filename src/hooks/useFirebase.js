@@ -48,7 +48,7 @@ const useFirebase = () => {
     
     const saveUser = (email,displayName) => {
         const user = {email,displayName};
-        fetch('https://dreadful-mummy-01795.herokuapp.com/users',{
+        fetch('https://tourism-or-delivery-website-server-side.onrender.com/users',{
             method:'PUT',
             headers:{
                 'content-type':'application/json'
@@ -62,7 +62,7 @@ const useFirebase = () => {
     }
     // find admin
     useEffect(() => {
-        fetch(`https://dreadful-mummy-01795.herokuapp.com/admin/${user.email}`)
+        fetch(`https://tourism-or-delivery-website-server-side.onrender.com/admin/${user.email}`)
         .then(res => res.json())
         .then(data => {
             console.log('admin role = ',data.admin);

@@ -8,7 +8,7 @@ import LoadClient from '../LoadClient/LoadClient';
 const Clients = () => {
     const [review, setReview] = useState([]);
     useEffect(() => {
-        fetch('https://dreadful-mummy-01795.herokuapp.com/userReview')
+        fetch('https://tourism-or-delivery-website-server-side.onrender.com/userReview')
             .then(res => res.json())
             .then(data => {
                 setReview(data);

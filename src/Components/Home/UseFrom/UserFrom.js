@@ -15,7 +15,7 @@ const UserFrom = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('https://dreadful-mummy-01795.herokuapp.com/services', data)
+        axios.post('https://tourism-or-delivery-website-server-side.onrender.com/services', data)
             .then(res => {
                if(res.data.insertedId){
                    alert('Successfully added data');

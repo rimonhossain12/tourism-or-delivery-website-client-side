@@ -9,7 +9,7 @@ const AddService = () => {
     const { register, handleSubmit, reset  } = useForm();
 
     const onSubmit = data => {
-        fetch('https://dreadful-mummy-01795.herokuapp.com/services', {
+        fetch('https://tourism-or-delivery-website-server-side.onrender.com/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

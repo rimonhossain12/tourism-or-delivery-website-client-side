@@ -33,5 +33,5 @@ https://travelling-blog-site.web.app/
 https://travelling-blog-site.web.app/
 
 #Heroku live site link
-https://dreadful-mummy-01795.herokuapp.com/services
+https://tourism-or-delivery-website-server-side.onrender.com/services
 
